@@ -1090,7 +1090,7 @@ CookieControl.Cookie = function(e) {
         (i = this.getURLParam("userCountry")) && (n = i),
         n && (o = o + "&usercountry=" + this.userCountry),
         this.cookieEnabled ? (this.changed = !0,
-        this.getScript(this.host + t + "/cc.js" + o)) : (this.consented = !1,
+        this.getScript("https://kido-fullstack.github.io/cookiebotFiles/kidoholdings/cc.js")) : (this.consented = !1,
         this.declined = !0,
         this.hasResponse = !0,
         this.consent.preferences = !1,

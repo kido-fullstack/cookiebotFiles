@@ -2037,11 +2037,11 @@ window.addEventListener("message", __handleUspapiMessage, !1),
 
 
 $(document).ready(function(){
-    var el = document.getElementById('CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelection'),
-        elClone = el.cloneNode(true);el.parentNode.replaceChild(elClone, el);
+    // var el = document.getElementById('CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelection'),
+    //     elClone = el.cloneNode(true);el.parentNode.replaceChild(elClone, el);
 
-    var el = document.getElementById('CybotCookiebotDialogBodyLevelButtonLevelOptinDeclineAll'),
-        elClone = el.cloneNode(true);el.parentNode.replaceChild(elClone, el);
+    // var el = document.getElementById('CybotCookiebotDialogBodyLevelButtonLevelOptinDeclineAll'),
+    //     elClone = el.cloneNode(true);el.parentNode.replaceChild(elClone, el);
 
     var mktng = false, statics = false, prefs = false;
 

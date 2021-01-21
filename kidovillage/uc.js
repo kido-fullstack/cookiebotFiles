@@ -2063,3 +2063,34 @@ CookieControl.DateTime = function(e) {
 addUspapiLocatorFrame(),
 window.addEventListener("message", __handleUspapiMessage, !1),
 "object" != typeof CookieConsent ? "CookieConsent" != (CookieConsent = new CookieControl.Cookie("CookieConsent")).scriptId && "Cookiebot" != CookieConsent.scriptId && (window[CookieConsent.scriptId] = CookieConsent) : CookieConsent.log("WARNING: Cookiebot script is included twice - please remove one instance to avoid unexpected results.");
+
+
+
+$(document).ready(function(){
+    // var el = document.getElementById('CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelection'),
+    //     elClone = el.cloneNode(true);el.parentNode.replaceChild(elClone, el);
+
+    // var el = document.getElementById('CybotCookiebotDialogBodyLevelButtonLevelOptinDeclineAll'),
+    //     elClone = el.cloneNode(true);el.parentNode.replaceChild(elClone, el);
+
+    var mktng = false, statics = false, prefs = false;
+
+    $(document).on('click','#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelection',function(){
+    $("#CybotCookiebotDialogBodyLevelButtonPreferences").is(':checked') ? prefs = true : false;
+    $("#CybotCookiebotDialogBodyLevelButtonStatistics").is(':checked') ? statics = true : false;
+    $("#CybotCookiebotDialogBodyLevelButtonMarketing").is(':checked') ? mktng = true : false;
+    document.cookie = "CookieConsent={stamp:%271G0xk+WaONWtMeEA14lROcL42olR8Zc79intnS7EhxxZNFrvT0vqgA==%27%2Cnecessary:true%2Cpreferences:"+prefs+"%2Cstatistics:"+statics+"%2Cmarketing:"+mktng+"%2Cver:19%2Cutc:1611069349096%2Cregion:%27in%27};max-age=86400;";
+    $("#CybotCookiebotDialog").css("display","none");
+    });
+
+    $(document).on('click','#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll',function(){
+    prefs = true;statics = true;mktng = true;
+    document.cookie = "CookieConsent={stamp:%271G0xk+WaONWtMeEA14lROcL42olR8Zc79intnS7EhxxZNFrvT0vqgA==%27%2Cnecessary:true%2Cpreferences:"+prefs+"%2Cstatistics:"+statics+"%2Cmarketing:"+mktng+"%2Cver:19%2Cutc:1611069349096%2Cregion:%27in%27};max-age=86400;";
+    $("#CybotCookiebotDialog").css("display","none");
+    });
+
+    $(document).on('click','#CybotCookiebotDialogBodyLevelButtonLevelOptinDeclineAll',function(){
+    document.cookie = "CookieConsent={stamp:%271G0xk+WaONWtMeEA14lROcL42olR8Zc79intnS7EhxxZNFrvT0vqgA==%27%2Cnecessary:true%2Cpreferences:"+prefs+"%2Cstatistics:"+statics+"%2Cmarketing:"+mktng+"%2Cver:19%2Cutc:1611069349096%2Cregion:%27in%27};max-age=86400;";
+    $("#CybotCookiebotDialog").css("display","none");
+    });
+});

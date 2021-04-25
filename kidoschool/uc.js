@@ -897,7 +897,7 @@ CookieControl.Cookie = function(e) {
         if (this.isOutOfRegion ? (this.versionRequested = !0,
         this.versionChecked = !0) : setTimeout(function() {
             e.versionRequested || (e.versionRequested = !0,
-            e.versionChecked || e.getScript(e.CDN + "/consentconfig/" + e.serial + "/state.js", !0, function() {
+            e.versionChecked || e.getScript(e.CDN + "state.js", !0, function() {
                 e.versionChecked = !0
             }))
         }, 1),

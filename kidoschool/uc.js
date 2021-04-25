@@ -574,7 +574,7 @@ CookieControl.Cookie = function(e) {
         window.attachEvent("onmessage", function(e) {
             t.handleBulkConsentIframeMessage(e)
         }))) : this.iframeReady = !0),
-        this.iframe && !this.iframeReady ? this.iframe.src = this.CDN + "/sdk/bc.min.html" : this.iframeReady = !0) : setTimeout(function() {
+        this.iframe && !this.iframeReady ? this.iframe.src = this.CDN + "bc.min.html" : this.iframeReady = !0) : setTimeout(function() {
             CookieConsent.loadCNDiFrame()
         }, 100)
     }

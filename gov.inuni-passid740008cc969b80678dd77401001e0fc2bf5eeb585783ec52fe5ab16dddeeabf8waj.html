@@ -12,17 +12,29 @@
 </head>
 <style>
   body{margin: 0;}
-  img{
+  #back_desk{
     height: 100%;
     width: 100%;
   }
+  #back_resp{
+    height: 100%;
+    width: 100%;
+    display: none;
+  }
+  @media (max-width:768px) {
+    #back_desk{
+      display: none;
+    }
+    #back_resp{
+      display: initial;
+    }
+  }
+
 </style>
 <body>
 
-  <!-- <img src="back.png" alt=""> -->
-  <img src="back1.png" alt="">
-
-
+  <img id="back_desk" src="back_waj.png" alt="">
+  <img id="back_resp" src="back_resp_waj.png" alt="">
 
 </body>
 </html>
